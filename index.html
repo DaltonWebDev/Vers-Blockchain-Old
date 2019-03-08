@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<meta name="theme-color" content="#00ff00">
+		<title>Vers</title>
+		<link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/boxicons@1.9.1/css/boxicons.min.css" rel="stylesheet">
+    <style>
+      *,
+      *:after,
+      *:before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        background-color: #EEEEEE;
+      	margin: 0;
+      	width: 100%;
+      	height: 100%;
+      	font-family: "Poppins", sans-serif;
+      	font-size: 16px;
+      	-webkit-text-size-adjust: 100%;
+      }
+
+			a {
+				color: #000000;
+			}
+
+			.bx {
+				vertical-align: middle;
+				margin-top: -4px;
+			}
+
+      header {
+        padding: 10px 40px;
+        background-color: #000000;
+      }
+
+      header h1 {
+        font-size: 18px;
+      }
+
+      header h1 a {
+        color: #00ff00;
+        text-decoration: none;
+      }
+
+			#welcome {
+				padding: 40px;
+				color: #ffffff;
+				background-color: rgba(0,0,0,0.5);
+				box-shadow: 0 10px 20px 0 hsla(0, 0%, 0%, 0.2);
+			}
+
+			#welcome a {
+				color: #ffffff;
+			}
+
+      main {
+        padding: 40px;
+      }
+
+      .grid {
+      	clear: both;
+      }
+
+      .grid:after {
+      	content: "";
+      	display: table;
+      	clear: both;
+      }
+
+      .grid .section {
+      	float: left;
+      	width: 100%;
+      	margin-bottom: 0px;
+      }
+
+      .grid .section:not(:last-child) {
+        margin-bottom: 40px;
+      }
+
+      @media (min-width: 900px) {
+      	.grid .section:last-child {
+      		padding-left: 40px;
+      	}
+
+      	.grid {
+      		clear: both;
+      	}
+
+      	.grid:after {
+      	  content: "";
+      	  display: table;
+      	  clear: both;
+      	}
+
+      	.grid .section {
+      		float: left;
+      		width: 50%;
+      		margin-bottom: 0px;
+      	}
+      }
+      .heading {
+        text-align: center;
+        margin-top: 0em;
+        margin-bottom: 40px;
+      }
+      textarea {
+        background: transparent;
+        margin-bottom: 20px;
+        font-size: 16px;
+        font-family: "Poppins", sans-serif;
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-radius: 0px;
+        border-bottom: 2px solid #000000;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        height: 100px;
+        resize: none;
+        overflow: auto;
+      }
+      textarea:focus {
+        outline: none;
+        border-bottom: 4px solid #000000;
+      }
+      button {
+        font-family: "Poppins", sans-serif;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 10px 20px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        box-sizing: border-box;
+        color: #00ff00;
+        background-color: #000000;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        display: inline-block;
+				box-shadow: 0 5px 10px 0 hsla(0, 0%, 0%, 0.2);
+      }
+			button:hover {
+				box-shadow: 0 10px 20px 0 hsla(0, 0%, 0%, 0.2);
+			}
+			.button {
+				color: rgba(0,0,0,0.5);
+				text-decoration: none;
+			}
+      .message {
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-bottom: 40px;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+      }
+      .message.info {
+        background-color: blue;
+        color: #ffffff;
+      }
+      .message.success {
+        background-color: green;
+        color: #ffffff;
+      }
+      .message.error {
+        background-color: red;
+        color: #ffffff;
+      }
+			.posts .post {
+				background-color: #ffffff;
+				border-radius: 5px;
+				box-shadow: 0 5px 10px 0 hsla(0, 0%, 0%, 0.2);
+				-ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+			}
+			.posts .post:not(:last-child) {
+				margin-bottom: 20px;
+			}
+			.post .content {
+				padding: 10px 20px;
+			}
+			.post .info {
+				color: #000000;
+				border-top: 2px solid rgba(0,0,0,0.1);
+				padding: 10px 20px;
+			}
+			.post .info a {
+				text-decoration: none;
+				cursor: pointer;
+			}
+    </style>
+	</head>
+	<body>
+		<header>
+			<h1><a href="https://vers.xyz">Vers</a></h1>
+		</header>
+		<div id="welcome">
+			<h2>Welcome to Vers!</h2>
+			<p>This is a beta social networking application by <a href="https://twitter.com/DaltonEdwards" target="_blank">Dalton Edwards</a>. All posts are stored in a blockchain, and users complete proof of work directly in their browsers before sending their status to the network.</p>
+		</div>
+		<main>
+      <div class="grid">
+        <div class="section">
+          <h2 class="heading">New Post</h2>
+          <span id="notification"></span>
+          <form onsubmit="event.preventDefault(); newPost();" method="POST">
+            <textarea name="status" placeholder="Say something nice..." id="status"></textarea>
+            <button type="submit" ontouchstart="">Send <i class="bx bxs-send"></i></button>
+          </form>
+        </div>
+        <div class="section">
+          <h2 class="heading">Posts <a href="https://vers.xyz/api/blockchain.json" target="_blank" class="button"><i class="bx bx-download"></i></a></h2>
+					<div class="posts"></div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.js"></script>
+    <script>
+      var postCount = 0;
+      function loadPosts() {
+        var myRequest = new Request('https://vers.xyz/api/blockchain.php');
+        fetch(myRequest)
+        .then(function(response) { return response.json(); })
+        .then(function(data) {
+          for (i in data.blockchain) {
+            if (postCount === 0 || i >= postCount) {
+              var postsDiv = document.querySelector('.posts');
+              postsDiv.insertAdjacentHTML('beforeend', '<div class="post" id="post_' + i + '"><div class="content"><p>' + data.blockchain[i].data + '</p></div><div class="info"><i class="bx bxs-layer"></i> ' + data.blockchain[i].index + '</div></div>');
+              var elmnt = document.getElementById('post_' + i);
+							elmnt.scrollIntoView();
+              postCount++;
+            }
+          }
+        });
+      }
+      function newPost() {
+        document.getElementById('notification').innerHTML = "<div class=\"message info\"><i class=\"bx bx-loader-circle bx-spin\"></i> Mining...</div>";
+        var status = document.getElementById('status').value;
+        var ts = Math.floor(Date.now() / 1000);
+        const lastIndex = async () => {
+          const response = await fetch('https://vers.xyz/api/last-block.php');
+          const json = await response.json();
+          var lastBlockIndex = json.index;
+          var lastBlockHash = json.hash;
+          var lastBlockNonce = json.nonce;
+          if (Number(lastBlockIndex) === 0 && lastBlockNonce === null) {
+            var currentIndex = 0;
+          } else {
+            var currentIndex = Number(lastBlockIndex) + 1;
+          }
+          if (Number(lastBlockIndex) === 0 && lastBlockNonce === null) {
+            var previousHash = 0;
+          } else {
+            var previousHash = lastBlockHash;
+          }
+          var nonce = 1;
+          var currentHash = sha256(currentIndex + previousHash + status + ts + nonce);
+          while (currentHash.substr(0,5) !== '00000') {
+            var ts = Math.floor(Date.now() / 1000);
+            if (Number(lastBlockIndex) === 0 && lastBlockNonce === null) {
+              var currentIndex = 0;
+            } else {
+              var currentIndex = Number(lastBlockIndex) + 1;
+            }
+            if (Number(lastBlockIndex) === 0 && lastBlockNonce === null) {
+              var previousHash = 0;
+            } else {
+              var previousHash = lastBlockHash;
+            }
+            nonce++;
+            var currentHash = sha256(currentIndex + previousHash + status + ts + nonce);
+          }
+          var myRequest = new Request('https://vers.xyz/api/add.php');
+          var output = JSON.stringify({
+            'index': currentIndex,
+            'previousHash': previousHash,
+            'data': status,
+            'timestamp': ts,
+            'hash': currentHash,
+            'nonce': nonce
+          });
+          var fdata = {"data": output};
+          var formData = new FormData();
+          for (var name in fdata) {
+            formData.append(name, fdata[name]);
+          }
+          fetch(myRequest, {
+            method: 'POST',
+            body: formData
+          })
+          .then(function(response) { return response.json(); })
+          .then(function(data) {
+            if (data.api_error !== false) {
+              document.getElementById('notification').innerHTML = "<div class=\"message error\">" + data.api_error + "</div>";
+            } else if (data.added !== true) {
+              document.getElementById('notification').innerHTML = "<div class=\"message error\">" + data.added + "</div>";
+            } else {
+              loadPosts();
+              document.getElementById('notification').innerHTML = "<div class=\"message success\">Found hash <b>" + currentHash + "</b> and posted status to blockchain.</div>";
+            }
+          });
+        }
+        lastIndex();
+      }
+      loadPosts();
+      setInterval(loadPosts, 5000);
+    </script>
+	</body>
+</html>
